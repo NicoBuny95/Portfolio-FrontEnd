@@ -1,0 +1,38 @@
+<section class="sec" >
+   
+
+
+    <div class="row">
+      <h1>Proyectos</h1>
+      <div class="col-lg-2">
+          <button type="button" class="btn btn-dark" routerLink="añadirProy" *ngIf="isLogged">
+            <i class="bi bi-file-plus"></i>Añadir Proyecto
+          </button>
+      </div>
+  
+    
+      <div class="col-lg-11">
+          <table class="table">
+              <tbody>
+                  <tr *ngFor="let p of proy">
+                      <td>
+                          <h2>{{p.nombre}}</h2>
+                      </td>
+                      <td>{{p.descripcion}}</td>
+
+                      <td >
+                          <button class="btn btn-light" routerLink="/editarProy/{{p.id}}" *ngIf="isLogged">
+                              <i class="bi bi-pencil-fill"></i> </button>
+                      </td>
+                      <td> 
+                        <button class="btn btn-danger" (click)="confirmacionEliminar(p.id)" *ngIf="isLogged" >
+                            <i class="bi bi-trash-fill"></i></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+</section>
+      

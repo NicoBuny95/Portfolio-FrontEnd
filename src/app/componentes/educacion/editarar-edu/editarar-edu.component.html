@@ -1,0 +1,32 @@
+<div class="container col-md-6" *ngIf="educacion">
+    <div class="card">
+      <div class="card-header">
+        <h3>Modificar Datos</h3>
+      </div>
+      <div class="card-body">
+        <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+          <div class="form-group">
+            <label for="">Titulo:</label>
+            <input [(ngModel)]="educacion.titulo" name="titulo" type="text" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="">instituto:</label>
+            <input [(ngModel)]="educacion.institucion" name="institucion" type="text" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="">Ubicacion:</label>
+            <input [(ngModel)]="educacion.ubicacion" name="ubicacion" type="text" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="">Fecha Inicio:</label>
+            <input [(ngModel)]="educacion.fechaIn" name="fechainicio" type="text" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="">Fecha Finalizacion:</label>
+            <input [(ngModel)]="educacion.fechaFin" name="fechafin" type="text" class="form-control">
+          </div>
+          <button  class="btn btn-danger">Actualizar</button>
+        </form>
+      </div>
+    </div>
+  </div>

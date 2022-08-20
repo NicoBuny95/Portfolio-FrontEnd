@@ -1,0 +1,47 @@
+<div class="container caja-log">
+    <div class="row text-center login-page">
+  <div class="col-md-12 login-form">
+    <form (ngSubmit)="onSubmit()" > 			
+       <div class="row">
+    <div class="col-md-12 login-form-header">
+       <p class="login-form-font-header">Agregar<span>Estudios</span><p>
+    </div>
+  </div>
+  
+  <div class="row">
+   <div class="col-md-12 login-from-row">
+    <input  [(ngModel)]="estudio.titulo"  class="input-log" name="titulo" type="text" placeholder="Titulo/Certificado"   required/>
+   </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 login-from-row">
+     <input [(ngModel)]="estudio.institucion" class="input-log" name="Instituto" type="text" placeholder="Instituto/Universidad" required/>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12 login-from-row">
+       <input  [(ngModel)]="estudio.ubicacion" class="input-log" name="Ubicacion" type="text" placeholder="Ubicacion" required/>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12 login-from-row">
+       <input  [(ngModel)]="estudio.fechaIn" class="input-log" name="Fechainicio" type="text" placeholder="Fecha Inicio" required/>
+    </div>
+   </div>
+  <div class="row">
+   <div class="col-md-12 login-from-row">
+      <input  [(ngModel)]="estudio.fechaFin" class="input-log" name="FechaFin" type="text" placeholder="Fecha Finalizacion" required/>
+   </div>
+  </div>
+  <div class="row">
+   <div class="col-md-12 login-from-row">
+      <button (click)="Guardar()" (click)="alertWithSuccess()" class="btn btn-info">Guardar</button>
+   </div>
+  </div>
+  </form>
+  </div>
+  </div>
+  </div>
+  
+  
+  

@@ -1,0 +1,41 @@
+
+<section class="sec" >
+   
+
+
+    <div class="row">
+      <h1>Experiencias</h1>
+      <div class="col-lg-2">
+          <button type="button" class="btn btn-dark" routerLink="añadirExp" *ngIf="isLogged">
+            <i class="bi bi-file-plus"></i>Añadir Experiencia
+          </button>
+      </div>
+  
+    
+      <div class="col-lg-11">
+          <table class="table">
+              <tbody>
+                  <tr *ngFor="let exp of Exp">
+                      <td>
+                          <h2>{{exp.cargoOcupado}}</h2>
+                      </td>
+                      <td>{{exp.lugar}}</td>
+                      <td>{{exp.comienzo}}</td>
+                      <td>{{exp.finalizacion}}</td>
+                      <td>{{exp.descripcion}}</td>
+                      <td >
+                          <button class="btn btn-light" routerLink="/editarExp/{{exp.id}}" *ngIf="isLogged">
+                              <i class="bi bi-pencil-fill"></i> </button>
+                      </td>
+                      <td> 
+                        <button class="btn btn-danger" (click)="confirmacionEliminar(exp.id)" *ngIf="isLogged" >
+                            <i class="bi bi-trash-fill"></i></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+</section>
+

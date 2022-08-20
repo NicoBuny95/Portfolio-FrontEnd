@@ -1,0 +1,22 @@
+<div class="container col-md-6" *ngIf="proy">
+    <div class="card">
+      <div class="card-header">
+        <h3>Modificar Datos</h3>
+      </div>
+      <div class="card-body">
+        <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+          <div class="form-group">
+            <label for="">Nombre Proyecto:</label>
+            <input [(ngModel)]="proy.nombre" name="nombre" type="text" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="">Descripcion del Proyecto:</label>
+            <input [(ngModel)]="proy.descripcion" name="descripcion" type="text" class="form-control">
+          </div>
+          
+          <button  class="btn btn-danger">Actualizar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+

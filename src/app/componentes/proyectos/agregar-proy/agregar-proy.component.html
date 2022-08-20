@@ -1,0 +1,32 @@
+<div class="container caja-log">
+    <div class="row text-center login-page">
+  <div class="col-md-12 login-form">
+    <form (ngSubmit)="onSubmit()" > 			
+       <div class="row">
+    <div class="col-md-12 login-form-header">
+       <p class="login-form-font-header">Agregar<span>Proyecto</span><p>
+    </div>
+  </div>
+  
+  <div class="row">
+   <div class="col-md-12 login-from-row">
+    <input  [(ngModel)]="proy.nombre" class="input-log" name="nombre" type="text" placeholder="Nombre Proyecto" required/>
+   </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 login-from-row">
+     <input  [(ngModel)]="proy.descripcion" class="input-log" name="descripcion" type="text" placeholder="Descripcion del Proyecto" required/>
+    </div>
+   </div>
+ 
+  <div class="row">
+   <div class="col-md-12 login-from-row">
+      <button (click)="Guardar()" (click)="alertWithSuccess()" class="btn btn-info">Guardar</button>
+   </div>
+  </div>
+  </form>
+  </div>
+  </div>
+  </div>
+  
+  

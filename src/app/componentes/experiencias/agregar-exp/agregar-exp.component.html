@@ -1,0 +1,47 @@
+
+<div class="container caja-log">
+    <div class="row text-center login-page">
+  <div class="col-md-12 login-form">
+    <form (ngSubmit)="onSubmit()" > 			
+       <div class="row">
+    <div class="col-md-12 login-form-header">
+       <p class="login-form-font-header">Agregar<span>Experiencia</span><p>
+    </div>
+  </div>
+  
+  <div class="row">
+   <div class="col-md-12 login-from-row">
+    <input  [(ngModel)]="expe.cargoOcupado" class="input-log" name="carOcupado" type="text" placeholder="Cargo Ocupado" required/>
+   </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 login-from-row">
+     <input  [(ngModel)]="expe.lugar" class="input-log" name="lugar" type="text" placeholder="Lugar de Trabajo" required/>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12 login-from-row">
+       <input  [(ngModel)]="expe.comienzo" class="input-log" name="comienzo" type="text" placeholder="Fecha Inicio" required/>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12 login-from-row">
+       <input  [(ngModel)]="expe.finalizacion" class="input-log" name="finalizacion" type="text" placeholder="Fecha Finalizacion" required/>
+    </div>
+   </div>
+  <div class="row">
+   <div class="col-md-12 login-from-row">
+      <input  [(ngModel)]="expe.descripcion" class="input-log" name="descripcion" type="text" placeholder="Descripcion del Cargo" required/>
+   </div>
+  </div>
+  <div class="row">
+   <div class="col-md-12 login-from-row">
+      <button (click)="Guardar()" (click)="alertWithSuccess()" class="btn btn-info">Guardar</button>
+   </div>
+  </div>
+  </form>
+  </div>
+  </div>
+  </div>
+  
+  

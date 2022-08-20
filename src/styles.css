@@ -1,1 +1,211 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+    padding: 0;
+    margin: 0;
+    
+}
+
+
+.icono_redes{
+    height: 25px;
+    width: 25px;
+  
+ 
+}
+
+
+ .titulo_cabecero{
+    font-size: 15px;
+    display: inline-block;
+    padding: 5px 8px;
+    height: 50%;
+    color:white;
+   
+   
+    
+ }
+ .link_redes{
+     float:right;
+     padding: 3px 15px;
+     margin-top:20px;
+     
+    
+
+ }
+ .link_redes:hover{
+     background-color: white;
+     border-radius: 100%;
+ }
+
+ .btn-login{
+     float:right;
+     border-radius: 15%;
+     padding: 3px 8px;
+    color:white;
+    border: 3px solid white;
+    background-color:rgba(59, 95, 150, .5) ;
+    font-size: 15px;
+    margin-top:20px;
+    
+     
+ }
+ .contenedor_banner{
+     margin: 15px;
+     border-radius: 50px;
+     border: 1px solid black; 
+     padding-bottom: 10px;
+     background:rgba(19, 6, 66, 0.5) ;
+    
+     
+     
+ }
+
+ .imagen_banner{
+     width: 100%;
+     border-radius:50px 50px 0px 0px;
+     height: 20%;
+     margin-bottom: -70px;
+    
+
+ 
+    
+ }
+ .contenedor_heder{
+    background: linear-gradient(#f72585,#3a0ca3);
+    padding: 10px;
+    
+   
+   
+    
+
+
+ }
+ 
+ .imagen_perfil{
+     border-radius: 100%;
+     width:300px;
+     height:200px;
+     padding: 0px 65px;
+     position: relative;
+     bottom: 50px;
+
+  
+ }
+
+ .contenedor-profesion{ 
+     text-align: center;
+     background-color:rgba(217, 182, 245,.5);
+     width: 100%;
+     margin: auto;
+     display:inline-block;
+  
+
+ 
+ }
+
+ .q{
+     font-size:20px;
+     color: white;
+     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+ }
+ .f{
+     font-size:18px;
+     color:black;
+ 
+ }
+
+ .LogoAP{
+     width:150px;
+     height: 70px;
+     
+
+ }
+
+.prueba{
+    width: 50%;
+    margin-top:80px;
+    margin-left: 50px;
+    margin-bottom: auto;
+
+
+ 
+}
+.sec{
+    border-radius:30px;
+    border: 1px solid black;
+    text-align:left;
+    margin:15px;
+    padding-bottom: 100px;
+    background-color:rgba(217, 182, 245,.5);
+
+    
+
+
+}
+
+.contenedor-prueba{
+    width: 100%;
+    position: relative;
+    bottom: 50px;
+    
+}
+
+.btn{
+    float:right;
+      margin: 3px;
+      padding: 3px;
+      
+    
+
+}
+
+
+
+.containerOwnApp {
+    box-shadow: 0 0 27px 0 rgba(84, 84, 84, 0.62);
+    padding-top: 15px;
+ }
+  
+ .login-page {
+   padding: 18% 0 0;
+   margin: 0 auto 100px;
+   max-width: 360px;
+   position: relative;
+  
+ }
+  
+ .login-form {
+    box-shadow: 0 0 27px 0 rgba(84, 84, 84, 0.62);
+     background: linear-gradient(#f72585,#3a0ca3);
+   
+ }
+  
+ .login-form-header {
+    padding-top: 16px;
+ }
+  
+ .login-from-row {
+    padding-top: 16px;
+    padding-bottom: 16px;
+ }
+  
+ .login-form-font-header {
+    font-size:30px; 
+    font-weight: bold;
+ }
+  
+ .login-form-font-header span {
+    color: #007C9B;
+ }
+
+.caja-log{
+    position: fixed;
+    top:100px;
+    
+}
+
+.input-log{
+background: rgba(15, 15, 15,0.5);
+border-top: none;
+border-left: none;
+}

@@ -1,0 +1,33 @@
+<div class="container caja-log">
+  <div class="row text-center login-page">
+<div class="col-md-12 login-form">
+  <form #f="ngForm" (ngSubmit)="onLogin()" novalidate> 			
+     <div class="row">
+  <div class="col-md-12 login-form-header">
+     <p class="login-form-font-header">Iniciar<span>Seccion</span><p>
+  </div>
+</div>
+<div class="row">
+ <div class="col-md-12 login-from-row">
+    <input class="input-log" id="nombreUsuario" name="nombreUsuario" type="email" placeholder="Usuario" [(ngModel)]="nombreUsuario" required/>
+ </div>
+</div>
+<div class="row">
+ <div class="col-md-12 login-from-row">
+    <input class="input-log" id="password" name="password" type="password" placeholder="Contraseña"  [(ngModel)]="password" required/>
+ </div>
+</div>
+<div class="row">
+ <div class="col-md-12 login-from-row">
+    <button class="btn btn-info"  >Acceder</button>
+ </div>
+ <div>
+   <p class="mb-0">¿No tienes una cuenta? <a href="#!" class="text-white-50 fw-bold">Sign Up</a>
+   </p>
+ </div>
+</div>
+</form>
+</div>
+</div>
+</div>
+
