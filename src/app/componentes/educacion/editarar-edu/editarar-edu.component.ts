@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Estudio } from 'src/app/estudio';
 import { ServicioEduService } from 'src/app/Servicios/servicio-edu.service';
+import Swal from 'sweetalert2';
 
 
 @Component({
@@ -21,7 +22,7 @@ export class EditararEduComponent implements OnInit {
       data =>{
         this.educacion = data;
       }, err =>{
-        alert("Error al modificar educacion");
+        this.alertError();
         this.router.navigate(['']);
       }
     )
@@ -37,6 +38,10 @@ export class EditararEduComponent implements OnInit {
          this.router.navigate(['']);
       }
     )
+  }
+
+  alertError(){
+    Swal.fire('Atencion', 'El registro no pudo ser modificado!', 'error');
   }
 
 }

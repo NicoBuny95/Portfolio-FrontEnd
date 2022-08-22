@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Proyecto } from 'src/app/proyecto';
 import { ServicioProyService } from 'src/app/Servicios/servicio-proy.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-editar-proy',
@@ -21,7 +22,7 @@ export class EditarProyComponent implements OnInit {
       data =>{
         this.proy = data;
       }, err =>{
-        alert("Error al modificar experiencia");
+        this.alertError();
         this.router.navigate(['']);
       }
     )
@@ -38,5 +39,9 @@ export class EditarProyComponent implements OnInit {
       }
     )
   }
+  alertError(){
+    Swal.fire('Atencion', 'El registro no pudo ser modificado!', 'error');
+  }
+
 
 }

@@ -9,7 +9,7 @@ import { Proyecto } from '../proyecto';
 export class ServicioProyService {
 
   constructor(private httpClient:HttpClient) { }
-  baseUrl='http://localhost:8080/Proyectos/';
+  baseUrl=' https://portfoback.herokuapp.com/Proyectos/';
 
 
 mostrarProyectos():Observable<Proyecto[]>{

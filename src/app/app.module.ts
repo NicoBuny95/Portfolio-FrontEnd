@@ -22,6 +22,7 @@ import { BannerComponent } from './componentes/banner/banner.component';
 import { AgregarExpComponent } from './componentes/experiencias/agregar-exp/agregar-exp.component';
 import { EditarExpComponent } from './componentes/experiencias/editar-exp/editar-exp.component';
 import { interceptorProvider } from './Servicios/interceptor-servicio';
+import { FooterComponent } from './componentes/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { interceptorProvider } from './Servicios/interceptor-servicio';
     AgregarEduComponent,
     EditararEduComponent,
     HomeComponent,
-    BannerComponent
+    BannerComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 export class ServicioEduService {
 
   constructor(private httpClient:HttpClient) { }
-  baseUrl='http://localhost:8080/educacion/';
+  baseUrl=' https://portfoback.herokuapp.com/educacion/';
 
 
 mostrarEstudios():Observable<Estudio[]>{

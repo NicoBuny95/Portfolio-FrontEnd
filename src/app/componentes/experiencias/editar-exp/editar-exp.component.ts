@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Experiencia } from 'src/app/experiencia';
 import { ServicioExpService } from 'src/app/Servicios/servicio-exp.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-editar-exp',
@@ -21,7 +22,7 @@ export class EditarExpComponent implements OnInit {
       data =>{
         this.expe = data;
       }, err =>{
-        alert("Error al modificar experiencia");
+        this.alertError();
         this.router.navigate(['']);
       }
     )
@@ -37,6 +38,10 @@ export class EditarExpComponent implements OnInit {
          this.router.navigate(['']);
       }
     )
+  }
+
+  alertError(){
+    Swal.fire('Atencion', 'El registro no pudo ser modificado!', 'error');
   }
 
 }
