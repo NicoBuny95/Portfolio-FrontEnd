@@ -68,7 +68,7 @@ export class ProyectosComponent implements OnInit {
         Swal.fire(
           
           'Eliminado!',
-          'Educacion Eliminada',
+          'Proyecto Eliminada',
           'success'
         )
       } else if (result.dismiss === Swal.DismissReason.cancel) {

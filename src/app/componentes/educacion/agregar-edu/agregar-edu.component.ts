@@ -28,7 +28,7 @@ export class AgregarEduComponent implements OnInit {
 }
 
   irALaEstudios(){
-    this.router.navigate(['estudciosyexperiencia']);
+    this.router.navigate(['']);
   }
   onSubmit(){
     this.Guardar();

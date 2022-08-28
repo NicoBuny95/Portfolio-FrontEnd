@@ -68,7 +68,7 @@ export class ExperienciasComponent implements OnInit {
         Swal.fire(
           
           'Eliminado!',
-          'Educacion Eliminada',
+          'Experiencia Eliminada',
           'success'
         )
       } else if (result.dismiss === Swal.DismissReason.cancel) {

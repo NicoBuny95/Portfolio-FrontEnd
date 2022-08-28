@@ -35,7 +35,7 @@ export class AgregarProyComponent implements OnInit {
   }
 
 alertWithSuccess(){
-  Swal.fire('Registro Exitoso', 'Educacion agregada correctamente!', 'success');
+  Swal.fire('Registro Exitoso', 'Proyecto agregado correctamente!', 'success');
 }
 
 

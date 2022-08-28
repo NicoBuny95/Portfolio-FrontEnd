@@ -1,7 +1,7 @@
 <div class="container caja-log">
     <div class="row text-center login-page">
   <div class="col-md-12 login-form">
-    <form (ngSubmit)="onSubmit()" > 			
+    <form (ngSubmit)="onSubmit()" entype="mulipart/form-data" > 			
        <div class="row">
     <div class="col-md-12 login-form-header">
        <p class="login-form-font-header">Agregar<span>Estudios</span><p>
@@ -35,9 +35,15 @@
   </div>
   <div class="row">
    <div class="col-md-12 login-from-row">
+      <input  type="file"/>
+   </div>
+  </div>
+  <div class="row">
+   <div class="col-md-12 login-from-row">
       <button (click)="Guardar()" (click)="alertWithSuccess()" class="btn btn-info">Guardar</button>
    </div>
   </div>
+  
   </form>
   </div>
   </div>

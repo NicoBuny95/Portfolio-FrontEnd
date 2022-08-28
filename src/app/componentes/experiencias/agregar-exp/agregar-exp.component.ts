@@ -29,14 +29,14 @@ export class AgregarExpComponent implements OnInit {
 }
 
   irAExpe(){
-    this.router.navigate(['experiencias']);
+    this.router.navigate(['']);
   }
   onSubmit(){
     this.Guardar();
   }
 
 alertWithSuccess(){
-  Swal.fire('Registro Exitoso', 'Educacion agregada correctamente!', 'success');
+  Swal.fire('Registro Exitoso', 'Experiencia agregada correctamente!', 'success');
 }
 
 

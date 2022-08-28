@@ -9,6 +9,7 @@ import { ProyectosComponent } from './componentes/proyectos/proyectos.component'
 import { LoginComponent } from './componentes/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { ExperienciasComponent } from './componentes/experiencias/experiencias.component';
 import { HySComponent } from './componentes/hy-s/hy-s.component';
@@ -47,12 +48,14 @@ import { FooterComponent } from './componentes/footer/footer.component';
     FooterComponent
   ],
   imports: [
-    BrowserModule,
+     DragDropModule,
+     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     NgCircleProgressModule.forRoot({}),
     HttpClientModule,
-    FormsModule
+    FormsModule,
+   
 ],
   providers: [interceptorProvider],
   bootstrap: [AppComponent]
