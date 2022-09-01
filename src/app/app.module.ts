@@ -9,7 +9,7 @@ import { ProyectosComponent } from './componentes/proyectos/proyectos.component'
 import { LoginComponent } from './componentes/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { DragDropModule } from '@angular/cdk/drag-drop';
+
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { ExperienciasComponent } from './componentes/experiencias/experiencias.component';
 import { HySComponent } from './componentes/hy-s/hy-s.component';
@@ -24,6 +24,7 @@ import { AgregarExpComponent } from './componentes/experiencias/agregar-exp/agre
 import { EditarExpComponent } from './componentes/experiencias/editar-exp/editar-exp.component';
 import { interceptorProvider } from './Servicios/interceptor-servicio';
 import { FooterComponent } from './componentes/footer/footer.component';
+import { EditarAcercaComponent } from './componentes/editar-acerca/editar-acerca.component';
 
 @NgModule({
   declarations: [
@@ -45,11 +46,12 @@ import { FooterComponent } from './componentes/footer/footer.component';
     EditararEduComponent,
     HomeComponent,
     BannerComponent,
-    FooterComponent
+    FooterComponent,
+    EditarAcercaComponent
   ],
   imports: [
-     DragDropModule,
-     BrowserModule,
+     
+    BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     NgCircleProgressModule.forRoot({}),

@@ -1,7 +1,7 @@
 <div class="container caja-log">
     <div class="row text-center login-page">
   <div class="col-md-12 login-form">
-    <form (ngSubmit)="onSubmit()" entype="mulipart/form-data" > 			
+    <form (ngSubmit)="onSubmit()"  > 			
        <div class="row">
     <div class="col-md-12 login-form-header">
        <p class="login-form-font-header">Agregar<span>Estudios</span><p>
@@ -35,12 +35,12 @@
   </div>
   <div class="row">
    <div class="col-md-12 login-from-row">
-      <input  type="file"/>
+      <input [(ngModel)]="estudio.img_edu" class="input-log" name="img" type="text" placeholder="Url de la Imagen"/>
    </div>
   </div>
   <div class="row">
    <div class="col-md-12 login-from-row">
-      <button (click)="Guardar()" (click)="alertWithSuccess()" class="btn btn-info">Guardar</button>
+      <button  class="btn btn-info">Guardar</button>
    </div>
   </div>
   

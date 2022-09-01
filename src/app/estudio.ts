@@ -1,8 +1,9 @@
 export class Estudio {
     id:number;
-    institucion:String;
-    titulo:String;
-    ubicacion:String;
-    fechaIn:String; 
-    fechaFin: String
+    institucion:string;
+    titulo:string;
+    ubicacion:string;
+    fechaIn:string;
+    fechaFin: string;
+    img_edu:string;
 }

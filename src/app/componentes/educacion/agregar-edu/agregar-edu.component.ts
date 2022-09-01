@@ -19,7 +19,7 @@ export class AgregarEduComponent implements OnInit {
   Guardar(){
     this.service.agregarEstudio( this.estudio ).subscribe({ next: dato=>{
       console.log(dato);
-     
+      this.alertWithSuccess();
       this.irALaEstudios();}, 
       error:err => {console.log(err.error.msg);
      
@@ -30,7 +30,7 @@ export class AgregarEduComponent implements OnInit {
   irALaEstudios(){
     this.router.navigate(['']);
   }
-  onSubmit(){
+  onSubmit(): void{
     this.Guardar();
   }
 

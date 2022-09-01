@@ -15,6 +15,7 @@
           <table class="table ">
               <tbody>
                   <tr *ngFor="let estudio of estudios">
+                    <td> <img src="{{estudio.img_edu}}" alt="..." class="img-fluid img_secc"> </td>
                       <td>
                           <h2>{{estudio.titulo}}</h2>
                       </td>
@@ -22,6 +23,7 @@
                       <td>{{estudio.ubicacion}}</td>
                       <td>{{estudio.fechaIn}}</td>
                       <td>{{estudio.fechaFin}}</td>
+                      
                       <td >
                           <button class="btn btn-light" routerLink="/editarEdu/{{estudio.id}}" *ngIf="isLogged">
                               <i class="bi bi-pencil-fill"></i> </button>
@@ -31,6 +33,7 @@
                           <button class="btn btn-danger" (click)="confirmacionEliminar(estudio.id)" *ngIf="isLogged">
                               <i class="bi bi-trash-fill"></i></button>
                       </td>
+                      
                   </tr>
               </tbody>
           </table>

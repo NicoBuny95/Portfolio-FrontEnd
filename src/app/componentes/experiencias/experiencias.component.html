@@ -16,6 +16,7 @@
           <table class="table">
               <tbody>
                   <tr *ngFor="let exp of Exp">
+                    <div> <img src="{{exp.imgExp}}" alt="..." class="img-fluid img_secc"> </div>
                       <td>
                           <h2>{{exp.cargoOcupado}}</h2>
                       </td>
@@ -23,6 +24,7 @@
                       <td>{{exp.comienzo}}</td>
                       <td>{{exp.finalizacion}}</td>
                       <td>{{exp.descripcion}}</td>
+                      <td>{{exp.imgExp}}</td>
                       <td >
                           <button class="btn btn-light" routerLink="/editarExp/{{exp.id}}" *ngIf="isLogged">
                               <i class="bi bi-pencil-fill"></i> </button>

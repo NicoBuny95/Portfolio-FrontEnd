@@ -214,3 +214,8 @@ background: rgba(15, 15, 15,0.5);
 border-top: none;
 border-left: none;
 }
+
+.img_secc{
+    width:50px;
+    height:40px;
+}

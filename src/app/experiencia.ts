@@ -1,8 +1,9 @@
 export class Experiencia {
-    id:number
-    cargoOcupado:String
-    lugar:String
-    comienzo:String
-    finalizacion:String
-    descripcion:String
+    id:number;
+    cargoOcupado:string;
+    lugar:string;
+    comienzo:string;
+    finalizacion:string;
+    descripcion:string;
+    imgExp:string;
 }
