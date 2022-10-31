@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { LoginUsuario } from 'src/app/login-usuario';
 import { AuthService } from 'src/app/Servicios/auth.service';
 import { TokenService } from 'src/app/Servicios/token.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-login',
@@ -37,14 +38,24 @@ export class LoginComponent implements OnInit {
         this.tokenService.setUserName(data.nombreUsuario);
         this.tokenService.setAuthorities(data.authorities);
         this.roles = data.authorities;
+        this.alertWithSuccess();
         this.router.navigate([''])
       }, err =>{
         this.isLogged = false;
         this.isLogginFail = true;
+        this.alertError();
         this.errMsj = err.error.mensaje;
         console.log(this.errMsj);
         
       })
+  }
+
+  alertWithSuccess(){
+    Swal.fire('Bienvenido ', 'Ingreso correcto!', 'success');
+  }
+
+  alertError(){
+    Swal.fire('No se pudo iniciar seccion', 'Datos invalidos!', 'error');
   }
 
 }

@@ -17,19 +17,18 @@ export class AgregarEduComponent implements OnInit {
   }
 
   Guardar(){
-    this.service.agregarEstudio( this.estudio ).subscribe({ next: dato=>{
-      console.log(dato);
-      this.alertWithSuccess();
-      this.irALaEstudios();}, 
-      error:err => {console.log(err.error.msg);
-     
+    this.service.agregarEstudio( this.estudio ).subscribe({next:
+       data=>{
+        this.alertWithSuccess();
+        this.router.navigate(['']);
+      }, 
+      error: err =>{
+      this.alertError();
+      this.router.navigate(['']);
     }
   });
 }
-
-  irALaEstudios(){
-    this.router.navigate(['']);
-  }
+ 
   onSubmit(): void{
     this.Guardar();
   }
@@ -39,4 +38,7 @@ alertWithSuccess(){
 }
 
 
+alertError(){
+  Swal.fire('Atencion', 'El registro no pudo ser agregado!', 'error');
+}
 }

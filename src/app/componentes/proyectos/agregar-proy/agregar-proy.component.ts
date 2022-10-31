@@ -17,12 +17,14 @@ export class AgregarProyComponent implements OnInit {
   }
 
   Guardar(){
-    this.service.agregarProyecto( this.proy ).subscribe({ next: dato=>{
-      console.log(dato);
-     
-      this.irAProy();}, 
-      error:err => {console.log(err.error.msg);
-     
+    this.service.agregarProyecto( this.proy ).subscribe({ next: 
+      data=>{
+        this.alertWithSuccess();
+        this.router.navigate(['']);
+      }, 
+       error:err =>{
+      this.alertError();
+      this.router.navigate(['']);
     }
   });
 }
@@ -30,7 +32,7 @@ export class AgregarProyComponent implements OnInit {
   irAProy(){
     this.router.navigate(['']);
   }
-  onSubmit(){
+  onSubmit(): void{
     this.Guardar();
   }
 
@@ -38,5 +40,8 @@ alertWithSuccess(){
   Swal.fire('Registro Exitoso', 'Proyecto agregado correctamente!', 'success');
 }
 
+alertError(){
+  Swal.fire('Atencion', 'El registro no pudo ser agregado!', 'error');
+}
 
 }

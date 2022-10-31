@@ -1,0 +1,41 @@
+
+
+<div class="container caja-log">
+    <div class="row text-center login-page">
+  <div class="col-md-12 login-form">
+    <form (ngSubmit)="onCreate()" novalidate #f="ngForm"> 			
+       <div class="row">
+    <div class="col-md-12 login-form-header">
+       <p class="login-form-font-header">Agregar<span>Skill</span><p>
+    </div>
+  </div>
+  
+
+   <div class="row">
+    <div class="col-md-12 login-from-row">
+        <input type="text" class="input-log" id="nombre" name="nombre" [(ngModel)]="nombre" placeholder="Nombre de la skill" required>
+    </div>
+   </div>
+  <div class="row">
+   <div class="col-md-12 login-from-row">
+    <input type="text" class="input-log" id="porcentaje" name="porcentaje" [(ngModel)]="porcentaje" placeholder="Porcentaje de la skill" required>
+   </div>
+  </div>
+  <div class="row">
+   <div class="col-md-12 login-from-row">
+    <input type="text" class="input-log" id="imgproy" name="imgproy" [(ngModel)]="img_skill" placeholder="Url de imagen skill" required>
+   </div>
+  </div>
+  <div class="row">
+   <div class="col-md-12 login-from-row">
+      <button  class="btn btn-info">Guardar</button>
+   </div>
+  </div>
+  
+  </form>
+  </div>
+  </div>
+  </div>
+  
+  
+  

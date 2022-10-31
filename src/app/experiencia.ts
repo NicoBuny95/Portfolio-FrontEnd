@@ -5,5 +5,5 @@ export class Experiencia {
     comienzo:string;
     finalizacion:string;
     descripcion:string;
-    imgExp:string;
+    img_exp:string;
 }

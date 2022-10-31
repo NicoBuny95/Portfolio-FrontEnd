@@ -1,15 +1,26 @@
+
+<section class="sec ">
 <div class=" contenedor_banner">
      
     <img src="./../assets/software-developer.webp" alt="banner" class=" img-fluid imagen_banner">
 
-<div class="container-fluid">
-<div class="row">
-     <div class="col-sm">
-    <img src="./../assets/foto-perfil-NH.jpg" alt="" class="img-fluid imagen_perfil">  
+<div class="container-fluid ">
+<div class="row ">
+     <div class="col-sm  circulo ">
+    <div class="pos-btn-perfil">     
+     
+      <button type="button" class="btn btn-dark " routerLink="/editarPerfil/{{persona.id}}" *ngIf="isLogged">
+              <i class="bi bi-pencil-fill"> </i>
+            </button>
+      <img src="{{persona.img}}" alt="" class="img-fluid imagen_perfil" > 
+    </div>
+       
+
+   
        </div>
       <div class="col-sm">
                <div class="contenedor-profesion"> 
-        <h1 class="q">{{persona.nombre}} {{persona.apellido}}</h1>
+        <h1 class="q" >{{persona.nombre}} {{persona.apellido}}</h1>
         <h2 class="f">Desarrollador FullStack Jr / Analista de Sistemas </h2>
               </div>
                </div>
@@ -20,3 +31,5 @@
   
       
 </div> 
+
+</section>

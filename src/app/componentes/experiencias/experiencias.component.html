@@ -1,32 +1,55 @@
 
 <section class="sec" >
-   
 
 
-    <div class="row">
-      <h1 class="T-sec">Experiencias</h1>
+        
+            <div class="T-sec"><h1 class="textsec">Experiencia Laboral <i class="fi fi-rr-briefcase"></i></h1>  </div>
+          <div class="col-lg-2 pos-btn-sec">
+              <button type="button" class="btn btn-dark pos-btn-sec" routerLink="añadirExp" *ngIf="isLogged">
+                <i class="bi bi-file-plus">Añadir Experiencia</i>
+              </button>
+            </div>
+           
+        <div class="card"  *ngFor="let exp of Exp">
+            <div class="card-body">
+              <h1 class="card-title">Cargo: {{exp.cargoOcupado}}</h1>
+              <h2 class="card-lugar mb-2 text-muted">Lugar: {{exp.lugar}}</h2>
+              <img src="{{exp.img_exp}}" alt="..." class="img-fluid img_secc">
+              <p class="card-desc">{{exp.descripcion}}</p>
+              <h2 class="card-duracion">Desde: {{exp.comienzo}} Hasta: {{exp.finalizacion}}</h2> 
+              
+              
+                
+            </div>
+              <button class="btn btn-dark" routerLink="/editarExp/{{exp.id}}" *ngIf="isLogged">
+                    <i class="bi bi-pencil-fill"></i> </button>
+        
+
+               <button class="btn btn-dark" (click)="confirmacionEliminar(exp.id)" *ngIf="isLogged">
+                    <i class="bi bi-trash-fill"></i></button>
+            
+          </div>
+    <!----<div class="row">
+        <div class="T-sec"><h1 class="textsec">Experiencia Laboral</h1></div>
       <div class="col-lg-2">
-          <button type="button" class="btn btn-dark" routerLink="añadirExp" *ngIf="isLogged">
-            <i class="bi bi-file-plus"></i>Añadir Experiencia
+          <button type="button" class="btn btn-dark pos-btn-sec" routerLink="añadirExp" *ngIf="isLogged">
+            <i class="bi bi-file-plus">Añadir Experiencia</i>
           </button>
       </div>
   
     
-      <div class="col-lg-11">
+      <div class="col-lg-11 table-responsive">
           <table class="table">
               <tbody>
                   <tr *ngFor="let exp of Exp">
-                    <div> <img src="{{exp.imgExp}}" alt="..." class="img-fluid img_secc"> </div>
-                      <td>
-                          <h2>{{exp.cargoOcupado}}</h2>
-                      </td>
+                    <td> <img src="{{exp.img_exp}}" alt="..." class="img-fluid img_secc"> </td>
+                      <td><h2>{{exp.cargoOcupado}}</h2></td>
                       <td>{{exp.lugar}}</td>
                       <td>{{exp.comienzo}}</td>
                       <td>{{exp.finalizacion}}</td>
                       <td>{{exp.descripcion}}</td>
-                      <td>{{exp.imgExp}}</td>
                       <td >
-                          <button class="btn btn-light" routerLink="/editarExp/{{exp.id}}" *ngIf="isLogged">
+                          <button class="btn btn-dark" routerLink="/editarExp/{{exp.id}}" *ngIf="isLogged">
                               <i class="bi bi-pencil-fill"></i> </button>
                       </td>
                       <td> 
@@ -38,6 +61,6 @@
         </table>
     </div>
 
-</div>
+</div> --->
 </section>
 

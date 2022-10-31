@@ -9,13 +9,14 @@ import { Observable } from 'rxjs';
 export class ServicioEduService {
 
   constructor(private httpClient:HttpClient) { }
-  baseUrl=' https://portfoback.herokuapp.com/educacion/';
+ baseUrl='http://localhost:8080/educacion/'
+ // baseUrl=' https://portfoback.herokuapp.com/educacion/';
 
 
 mostrarEstudios():Observable<Estudio[]>{
    return this.httpClient.get<Estudio[]>(`${this.baseUrl}ver`);
  }
- agregarEstudio(estudio :Estudio ):Observable<Object>{
+ agregarEstudio(estudio :Estudio ):Observable<any>{
    return this.httpClient.post<Estudio>(`${this.baseUrl}Registrar`,estudio);
  }
 

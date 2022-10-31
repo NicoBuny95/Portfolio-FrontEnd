@@ -2,11 +2,40 @@
    
      <section class="sec " >
    
-    <div class="row">
-      <h1 class="T-sec" >Educacion</h1>
+
+      
+            <div class="T-sec"><h1 class="textsec">Formacion Academica <i class="fi fi-rr-graduation-cap"></i></h1></div>
+          <div class="col-lg-2 pos-btn-sec">
+              <button type="button" class="btn btn-dark pos-btn-sec" routerLink="añadirEdu" *ngIf="isLogged">
+                <i class="bi bi-file-plus">Añadir Educacion</i>
+              </button>
+            </div>
+            
+
+        <div class="card"  *ngFor="let estudio of estudios" >
+            <div class="card-body">
+              <h1 class="card-title">Titulo: {{estudio.titulo}}</h1>  <br>
+              <img src="{{estudio.img_edu}}" alt="..." class="img-fluid img_secc">
+              <h2 class="card-instituto mb-2 text-muted">Institucion: {{estudio.institucion}}</h2>
+             
+              <h2 class="card-lugar">{{estudio.ubicacion}}</h2> 
+              <h2 class="card-fecha">Desde: {{estudio.fechaIn}} Hasta: {{estudio.fechaFin}}</h2>
+             
+                
+            
+            </div>
+               <button class="btn btn-dark" routerLink="/editarEdu/{{estudio.id}}" *ngIf="isLogged">
+                    <i class="bi bi-pencil-fill"></i> </button>
+        
+
+                <button class="btn btn-dark" (click)="confirmacionEliminar(estudio.id)" *ngIf="isLogged">
+                    <i class="bi bi-trash-fill"></i></button>
+          </div>
+    <!--<div class="row">
+        <div class="T-sec"><h1 class="textsec">Formacion Academica</h1></div>
       <div class="col-lg-2">
-          <button type="button" class="btn btn-dark" routerLink="añadirEdu" *ngIf="isLogged">
-            <i class="bi bi-file-plus"></i>Añadir Educacion
+          <button type="button" class="btn btn-dark pos-btn-sec" routerLink="añadirEdu" *ngIf="isLogged">
+            <i class="bi bi-file-plus">Añadir Educacion</i>
           </button>
       </div>
   
@@ -16,16 +45,14 @@
               <tbody>
                   <tr *ngFor="let estudio of estudios">
                     <td> <img src="{{estudio.img_edu}}" alt="..." class="img-fluid img_secc"> </td>
-                      <td>
-                          <h2>{{estudio.titulo}}</h2>
-                      </td>
+                      <td><h2>{{estudio.titulo}}</h2></td>
                       <td>{{estudio.institucion}}</td>
                       <td>{{estudio.ubicacion}}</td>
                       <td>{{estudio.fechaIn}}</td>
                       <td>{{estudio.fechaFin}}</td>
                       
                       <td >
-                          <button class="btn btn-light" routerLink="/editarEdu/{{estudio.id}}" *ngIf="isLogged">
+                          <button class="btn btn-dark" routerLink="/editarEdu/{{estudio.id}}" *ngIf="isLogged">
                               <i class="bi bi-pencil-fill"></i> </button>
                       </td>
                       <td > 
@@ -39,7 +66,7 @@
           </table>
       </div>
   
-  </div>
+  </div>---->
 
 </section>
 

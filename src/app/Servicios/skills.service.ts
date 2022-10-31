@@ -8,21 +8,28 @@ import { Skills } from '../skills';
 })
 export class SkillsService {
 
-   private apiServerUrl = '*';
+ Url=' http://localhost:8080/skill/'
+  // Url=' https://portfoback.herokuapp.com/skill/';
 
   constructor(private http: HttpClient) {}
 
-  public getSkill(): Observable<Skills[]> {
-    return this.http.get<Skills[]>(`${this.apiServerUrl}/api/skill`);
-  }
-  public addSkill(skill: Skills): Observable<Skills> {
-    return this.http.post<Skills>(`${this.apiServerUrl}/api/skill`, skill);
+  public lista(): Observable<Skills[]>{
+    return this.http.get<Skills[]>(this.Url + 'lista');
   }
 
-  public updateSkill(skill: Skills): Observable<Skills> {
-    return this.http.put<Skills>(`${this.apiServerUrl}/api/skill`, skill);
+  public detail(id: number): Observable<Skills>{
+    return this.http.get<Skills>(this.Url + `detail/${id}`);
   }
-  public deleteSkill(skillId: number): Observable<void> {
-    return this.http.delete<void>(`${this.apiServerUrl}/api/skill/${skillId}`);
+
+  public save(skill: Skills): Observable<any>{
+    return this.http.post<any>(this.Url + 'create', skill);
+  }
+
+  public update(id: number, skill: Skills): Observable<any>{
+    return this.http.put<any>(this.Url + `update/${id}`, skill);
+  }
+
+  public delete(id: number): Observable<any>{
+    return this.http.delete(this.Url + `delete/${id}`);
   }
 }

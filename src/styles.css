@@ -4,7 +4,7 @@
     margin: 0;
     
 }
-
+body{background:rgb(27, 10, 75)}
 
 .icono_redes{
     height: 25px;
@@ -49,21 +49,11 @@
     
      
  }
- .contenedor_banner{
-     margin: 15px;
-     border-radius: 50px;
-     border: 1px solid black; 
-     padding-bottom: 10px;
-     background-color:rgba(74, 4, 131, 0.5);
-    
-     
-     
- }
-
+ 
  .imagen_banner{
      width: 100%;
      border-radius:50px 50px 0px 0px;
-     height: 20%;
+     height: 6%;
      margin-bottom: -70px;
     
 
@@ -74,25 +64,43 @@
     background: linear-gradient(#f72585,#3a0ca3);
     padding: 10px;
     
-   
-   
-    
-
 
  }
  
  .imagen_perfil{
      border-radius: 100%;
-     width:300px;
-     height:200px;
-     padding: 0px 65px;
+     width:150px;
+     height:150px;
+     margin: 0px 45px;
      position: relative;
-     bottom: 50px;
+    
 
  }
+ .pos-btn-perfil{
+    display:grid;
+    place-items:center;
+    margin:0.8px;
+ }
+.pos-btn-sec{
+ float:right;
+ 
+}
+ .desc_acerca{
+    font-size: 25px;
+ }
+ .textsec{
+       font-size: 20px;
+ }
 .T-sec{
-    text-align:center;
-    padding-bottom: 100px;
+   border:1px ;
+   border-radius: 30px;
+   padding-bottom: 100px;
+   color:#fdfcfc;
+   width:100%;
+   padding:2px;
+   background-color:#7a037e ;
+   margin-bottom: 10px;
+
 
 
     
@@ -141,7 +149,7 @@
     text-align:left;
     margin:15px;
     padding-bottom: 100px;
-    background-color:rgba(74, 4, 131, 0.5);
+    background-color:rgb(102, 71, 129);
 
     
 
@@ -200,12 +208,12 @@
  }
   
  .login-form-font-header span {
-    color: #007C9B;
+    color: #fcfcfc;
  }
 
 .caja-log{
-    position: fixed;
-    top:100px;
+    position: relative;
+    top:20px;
    
 }
 
@@ -216,6 +224,15 @@ border-left: none;
 }
 
 .img_secc{
-    width:50px;
-    height:40px;
+    width:90px;
+    height:55px;
+    border-radius: 20%;
+    display: inline-block;
+    float:right;
 }
+
+
+
+
+
+  

@@ -25,6 +25,13 @@ import { EditarExpComponent } from './componentes/experiencias/editar-exp/editar
 import { interceptorProvider } from './Servicios/interceptor-servicio';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { EditarAcercaComponent } from './componentes/editar-acerca/editar-acerca.component';
+import { EditarSkillComponent } from './componentes/hy-s/editar-skill.component';
+import { AgregarSkillComponent } from './componentes/hy-s/agregar-skill.component';
+import { EditarPerfilComponent } from './componentes/banner/editar-perfil/editar-perfil.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideStorage,getStorage } from '@angular/fire/storage';
+
 
 @NgModule({
   declarations: [
@@ -47,7 +54,10 @@ import { EditarAcercaComponent } from './componentes/editar-acerca/editar-acerca
     HomeComponent,
     BannerComponent,
     FooterComponent,
-    EditarAcercaComponent
+    EditarAcercaComponent,
+    EditarSkillComponent,
+    AgregarSkillComponent,
+    EditarPerfilComponent
   ],
   imports: [
      
@@ -57,6 +67,9 @@ import { EditarAcercaComponent } from './componentes/editar-acerca/editar-acerca
     NgCircleProgressModule.forRoot({}),
     HttpClientModule,
     FormsModule,
+   
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideStorage(() => getStorage()),
    
 ],
   providers: [interceptorProvider],

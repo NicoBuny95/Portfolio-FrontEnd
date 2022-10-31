@@ -1,27 +1,58 @@
 <section class="sec" >
+
+
+    
+            <div class="T-sec"><h1 class="textsec">Proyectos <i class="fi fi-rr-file-spreadsheet"></i></h1></div>
+          <div class="col-lg-2 pos-btn-sec">
+              <button type="button" class="btn btn-dark pos-btn-sec" routerLink="añadirProy" *ngIf="isLogged">
+                <i class="bi bi-file-plus">Añadir Proyecto</i>
+              </button>
+            </div>
+         
+
+        <div class="card"  *ngFor="let p of proy">
+            <div class="card-body">
+              <h1 class="card-title">{{p.nombre}}</h1>
+            
+            
+            
+              <p class="card-Pdesc">{{p.descripcion}}</p>
+              
+                
+            
+            </div>
+                <button class="btn btn-dark" routerLink="/editarProy/{{p.id}}" *ngIf="isLogged">
+                    <i class="bi bi-pencil-fill"></i> </button>
+        
+
+                <button class="btn btn-dark" (click)="confirmacionEliminar(p.id)" *ngIf="isLogged">
+                    <i class="bi bi-trash-fill"></i></button>
+          </div>
    
-
-
-    <div class="row">
-      <h1 class="T-sec">Proyectos</h1>
+    <!---<div class="row">
+        <div class="T-sec"><h1 class="textsec">Proyectos</h1></div>
+      
       <div class="col-lg-2">
-          <button type="button" class="btn btn-dark" routerLink="añadirProy" *ngIf="isLogged">
-            <i class="bi bi-file-plus"></i>Añadir Proyecto
+          <button type="button" class="btn btn-dark pos-btn-sec" routerLink="añadirProy" *ngIf="isLogged">
+            <i class="bi bi-file-plus">Añadir Proyecto</i>
           </button>
       </div>
   
     
-      <div class="col-lg-11">
+      <div class="col-lg-11 table-responsive">
           <table class="table">
               <tbody>
                   <tr *ngFor="let p of proy">
+                    <td>
+                        <img src="{{p.img_proy}}" alt="" class="img-fluid img_secc">
+                    </td>
                       <td>
                           <h2>{{p.nombre}}</h2>
                       </td>
                       <td>{{p.descripcion}}</td>
 
                       <td >
-                          <button class="btn btn-light" routerLink="/editarProy/{{p.id}}" *ngIf="isLogged">
+                          <button class="btn btn-dark" routerLink="/editarProy/{{p.id}}" *ngIf="isLogged">
                               <i class="bi bi-pencil-fill"></i> </button>
                       </td>
                       <td> 
@@ -33,6 +64,6 @@
         </table>
     </div>
 
-</div>
+</div>--->
 </section>
       

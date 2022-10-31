@@ -1,9 +1,35 @@
 
 <section class="sec ">
-    <h1 class="T-sec">Acerca De</h1>
 
-     <h4>{{persona.descripcion}}</h4>
- <button class="btn btn-ligth"><i class="bi bi-pencil-fill"></i></button>
+
+
+<div class="T-sec"><h1 class="textsec">Acerca de mi</h1></div>
+
+
+<div class="box-acerca">
+   <div class="card"  >
+     <div class="card-body">
+        <p class="desc_acerca">{{persona.descripcion}}</p>
+      
+      
+        
+
+    
+    </div>
+    <button class="btn btn-dark" routerLink="/editarAcerca/{{persona.id}}" *ngIf="isLogged">
+            <i class="bi bi-pencil-fill"></i> </button>
+  </div>
+</div>
+
+   <!----- <div class="T-sec"><h1 class="textsec">Acerca de mi</h1></div> 
+    <p class="desc_acerca">{{persona.descripcion}}</p>
+    <div class="col-lg-2  pos-btn-sec">
+        <button type="button" class="btn btn-dark " routerLink="/editarAcerca/{{persona.id}}" *ngIf="isLogged">
+          <i class="bi bi-pencil-fill"> </i>
+        </button>
+    </div>---->
+    
+ 
 
 
 </section>

@@ -4,7 +4,7 @@
     <form (ngSubmit)="onSubmit()"  > 			
        <div class="row">
     <div class="col-md-12 login-form-header">
-       <p class="login-form-font-header">Agregar<span>Estudios</span><p>
+       <p class="login-form-font-header">Agregar<span>Educacion</span><p>
     </div>
   </div>
   
@@ -24,20 +24,24 @@
     </div>
    </div>
    <div class="row">
+      <div class="col-md-12 login-from-row">
+         <input [(ngModel)]="estudio.img_edu" class="input-log" id="selImg" name="selImg" type="text"  placeholder="Url de la Imagen"/>
+      </div>
+     </div>
+
+   <div class="row">
     <div class="col-md-12 login-from-row">
-       <input  [(ngModel)]="estudio.fechaIn" class="input-log" name="Fechainicio" type="text" placeholder="Fecha Inicio" required/>
+      <label for="Fechainicio">Fecha Inicio</label><br>
+       <input  [(ngModel)]="estudio.fechaIn" class="input-log" name="Fechainicio" type="date"  required/>
     </div>
    </div>
   <div class="row">
    <div class="col-md-12 login-from-row">
-      <input  [(ngModel)]="estudio.fechaFin" class="input-log" name="FechaFin" type="text" placeholder="Fecha Finalizacion" required/>
+      <label for="FechaFin">Fecha Finalizacion</label><br>
+      <input  [(ngModel)]="estudio.fechaFin" class="input-log" name="FechaFin" type="date" required/>
    </div>
   </div>
-  <div class="row">
-   <div class="col-md-12 login-from-row">
-      <input [(ngModel)]="estudio.img_edu" class="input-log" name="img" type="text" placeholder="Url de la Imagen"/>
-   </div>
-  </div>
+ 
   <div class="row">
    <div class="col-md-12 login-from-row">
       <button  class="btn btn-info">Guardar</button>
@@ -49,5 +53,5 @@
   </div>
   </div>
   
-  
+ 
   

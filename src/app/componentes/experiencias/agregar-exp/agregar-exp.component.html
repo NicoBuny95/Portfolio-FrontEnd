@@ -19,29 +19,36 @@
      <input  [(ngModel)]="expe.lugar" class="input-log" name="lugar" type="text" placeholder="Lugar de Trabajo" required/>
     </div>
    </div>
+
    <div class="row">
-    <div class="col-md-12 login-from-row">
-       <input  [(ngModel)]="expe.comienzo" class="input-log" name="comienzo" type="text" placeholder="Fecha Inicio" required/>
-    </div>
+   <div class="col-md-12 login-from-row">
+      <input [(ngModel)]="expe.img_exp"    name="img-exp" class="input-log"  type="text" placeholder="Url de la imagen"/>
    </div>
-   <div class="row">
-    <div class="col-md-12 login-from-row">
-       <input  [(ngModel)]="expe.finalizacion" class="input-log" name="finalizacion" type="text" placeholder="Fecha Finalizacion" required/>
-    </div>
-   </div>
+  </div> 
+  
   <div class="row">
    <div class="col-md-12 login-from-row">
       <input  [(ngModel)]="expe.descripcion" class="input-log" name="descripcion" type="text" placeholder="Descripcion del Cargo" required/>
    </div>
   </div>
-  <div class="row">
-   <div class="col-md-12 login-from-row">
-      <input [(ngModel)]="expe.imgExp" class="input-log"  type="text"/>
+
+   <div class="row">
+    <div class="col-md-12 login-from-row">
+       <input  [(ngModel)]="expe.comienzo" class="input-log" name="comienzo" type="date" placeholder="Fecha Inicio" required/>
+    </div>
    </div>
-  </div>
+
+   <div class="row">
+    <div class="col-md-12 login-from-row">
+       <input  [(ngModel)]="expe.finalizacion" class="input-log" name="finalizacion" type="date" placeholder="Fecha Finalizacion" required/>
+    </div>
+   </div>
+
+ 
+  
   <div class="row">
    <div class="col-md-12 login-from-row">
-      <button (click)="Guardar()" (click)="alertWithSuccess()" class="btn btn-info">Guardar</button>
+      <button  class="btn btn-info">Guardar</button>
    </div>
   </div>
   </form>

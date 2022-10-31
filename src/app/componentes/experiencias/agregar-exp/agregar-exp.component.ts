@@ -18,12 +18,14 @@ export class AgregarExpComponent implements OnInit {
   }
 
   Guardar(){
-    this.service.agregarExpe( this.expe ).subscribe({ next: dato=>{
-      console.log(dato);
-     
-      this.irAExpe();}, 
-      error:err => {console.log(err.error.msg);
-     
+    this.service.agregarExpe( this.expe ).subscribe({next:
+      data=>{
+        this.alertWithSuccess();
+        this.router.navigate(['']);
+      }, 
+       error:err =>{
+      this.alertError();
+      this.router.navigate(['']);
     }
   });
 }
@@ -39,6 +41,10 @@ alertWithSuccess(){
   Swal.fire('Registro Exitoso', 'Experiencia agregada correctamente!', 'success');
 }
 
-
-
+alertError(){
+  Swal.fire('Atencion', 'El registro no pudo ser agregado!', 'error');
 }
+}
+
+
+
